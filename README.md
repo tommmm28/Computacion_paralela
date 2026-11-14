@@ -402,12 +402,12 @@ secuenciales y acotan la ganancia (ley de Amdahl).
 
 | Integrante | Usuario GitHub | Parte a cargo | Archivos | Commits (hash / enlace) |
 |---|---|---|---|---|
-| Manuel Dios | _por completar_ | **Validación de datos y pruebas locales**: parseo del CSV, UUID, fecha/hora, montos, rango de fechas, datos de ejemplo, generador de datos y pruebas sin red | `src/validacion.hpp`, `data/ventas_ejemplo.csv`, `tests/unit_tests.cpp`, `tests/validate.sh`, `scripts/generar_datos.py` | _por completar_ |
-| Maximiliano Parra | _por completar_ | **API, autenticación y caché de tasas**: cliente libcurl, JWT compartido con mutex, refresco ante 401, reintentos y timeouts, parser JSON, caché sincronizada, manejo seguro de credenciales y API simulada | `src/api.hpp`, `src/json_min.hpp`, `src/cache_tasas.hpp`, `tests/mock_api.py`, `tests/e2e_mock.py`, `.gitignore`, `.env.example` | _por completar_ |
-| Tomas Martinez | _por completar_ | **Paralelización OpenMP, integración y rendimiento**: validación/duplicados en paralelo, reducción de claves, consulta paralela de tasas, agregación con mapas por hilo, programa principal, Makefile, benchmark y análisis de speedup | `src/procesamiento.hpp`, `main.cpp`, `Makefile`, `scripts/benchmark.sh`, `docs/analisis_rendimiento.md`, `README.md` | _por completar_ |
+| Manuel Dios | [@NeoManD10](https://github.com/NeoManD10) | **Validación de datos y pruebas locales**: parseo del CSV, UUID, fecha/hora, montos, rango de fechas, datos de ejemplo, generador de datos y pruebas sin red | `src/validacion.hpp`, `data/ventas_ejemplo.csv`, `tests/unit_tests.cpp`, `tests/validate.sh`, `scripts/generar_datos.py` | _por completar_ |
+| Maximiliano Parra | [@maxparra21](https://github.com/maxparra21) | **API, autenticación y caché de tasas**: cliente libcurl, JWT compartido con mutex, refresco ante 401, reintentos y timeouts, parser JSON, caché sincronizada, manejo seguro de credenciales y API simulada | `src/api.hpp`, `src/json_min.hpp`, `src/cache_tasas.hpp`, `tests/mock_api.py`, `tests/e2e_mock.py`, `.gitignore`, `.env.example` | _por completar_ |
+| Tomas Martinez | [@tommmm28](https://github.com/tommmm28) | **Paralelización OpenMP, integración y rendimiento**: validación/duplicados en paralelo, reducción de claves, consulta paralela de tasas, agregación con mapas por hilo, programa principal, Makefile, benchmark y análisis de speedup | `src/procesamiento.hpp`, `main.cpp`, `Makefile`, `scripts/benchmark.sh`, `docs/analisis_rendimiento.md`, `README.md` | _por completar_ |
 
 Cada integrante subió su parte desde su propia cuenta (ver `git shortlog -sne`). Completar el
-usuario de GitHub y los hashes de commit antes de entregar.
+hashes de commit antes de entregar.
 
 Recordatorio: agregar al docente [`https://github.com/sebasalazar`](https://github.com/sebasalazar)
 como miembro del repositorio.
