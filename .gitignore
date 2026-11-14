@@ -1,0 +1,42 @@
+# Binarios y objetos
+/programa
+/tests/unit_tests
+*.o
+*.out
+*.exe
+*.dSYM/
+
+# Salidas del programa (resumen, errores, bitácora de tasas, métricas)
+resumen_ventas_usd.csv
+*.errors.csv
+*.tasas.csv
+*.csv.out
+resumen_*.csv
+metricas*.csv
+benchmark-results/
+
+# Datos grandes generados localmente (data/ventas_ejemplo.csv SÍ se versiona)
+data/ventas_grande*.csv
+ventas.csv
+
+# Credenciales y secretos: NUNCA se suben
+.env
+.env.*
+!.env.example
+*.token
+*.jwt
+*token*.txt
+*credentials*
+*credenciales*
+*.pem
+*.key
+
+# Temporales
+*.tmp
+*.log
+*.swp
+*~
+.DS_Store
+__pycache__/
+.vscode/
+.idea/
