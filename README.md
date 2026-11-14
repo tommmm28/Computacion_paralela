@@ -52,16 +52,19 @@ Usa **OpenMP** para validar, consultar tasas y agregar en paralelo.
 │   ├── benchmark.sh          # tiempos con 1, 2, 4 y 8 hilos; speedup y eficiencia
 │   └── generar_datos.py      # genera CSV sintéticos grandes (sin tasas)
 ├── data/ventas_ejemplo.csv   # filas válidas e inválidas de ejemplo
-├── docs/analisis_rendimiento.md
+├── docs/
+│   ├── analisis_rendimiento.md # mediciones y análisis de rendimiento
+│   └── REQUISITOS.md           # dependencias, entorno y preparación
 ├── .env.example              # plantilla de credenciales (el .env real está en .gitignore)
 ├── Makefile
-└── Tarea1.pdf                # enunciado
+└── README.md               # instrucciones y participación
 ```
 
 ## Compilación
 
 Requisitos: GCC con OpenMP (probado con **GCC 14.2.0**), `libcurl` con headers de desarrollo
 y `make`. Python 3 solo se usa para pruebas y para generar datos.
+Consulta también la [guía de requisitos e instalación](docs/REQUISITOS.md), incluida la configuración de WSL en Windows.
 
 ```sh
 # Debian/Ubuntu
@@ -402,12 +405,12 @@ secuenciales y acotan la ganancia (ley de Amdahl).
 
 | Integrante | Usuario GitHub | Parte a cargo | Archivos | Commits (hash / enlace) |
 |---|---|---|---|---|
-| Manuel Dios | [@NeoManD10](https://github.com/NeoManD10) | **Validación de datos y pruebas locales**: parseo del CSV, UUID, fecha/hora, montos, rango de fechas, datos de ejemplo, generador de datos y pruebas sin red | `src/validacion.hpp`, `data/ventas_ejemplo.csv`, `tests/unit_tests.cpp`, `tests/validate.sh`, `scripts/generar_datos.py` | _por completar_ |
-| Maximiliano Parra | [@maxparra21](https://github.com/maxparra21) | **API, autenticación y caché de tasas**: cliente libcurl, JWT compartido con mutex, refresco ante 401, reintentos y timeouts, parser JSON, caché sincronizada, manejo seguro de credenciales y API simulada | `src/api.hpp`, `src/json_min.hpp`, `src/cache_tasas.hpp`, `tests/mock_api.py`, `tests/e2e_mock.py`, `.gitignore`, `.env.example` | _por completar_ |
-| Tomas Martinez | [@tommmm28](https://github.com/tommmm28) | **Paralelización OpenMP, integración y rendimiento**: validación/duplicados en paralelo, reducción de claves, consulta paralela de tasas, agregación con mapas por hilo, programa principal, Makefile, benchmark y análisis de speedup | `src/procesamiento.hpp`, `main.cpp`, `Makefile`, `scripts/benchmark.sh`, `docs/analisis_rendimiento.md`, `README.md` | _por completar_ |
+| Manuel Dios | [@NeoManD10](https://github.com/NeoManD10) | **Validación de datos y pruebas locales**: parseo del CSV, UUID, fecha/hora, montos, rango de fechas, datos de ejemplo, generador de datos y pruebas sin red | `src/validacion.hpp`, `data/ventas_ejemplo.csv`, `tests/unit_tests.cpp`, `tests/validate.sh`, `scripts/generar_datos.py` | [9d2fcd8](https://github.com/tommmm28/Computacion_paralela/commit/9d2fcd80fa9bb207755cc757533ed4fa43f59cc3) |
+| Maximiliano Parra | [@maxparra21](https://github.com/maxparra21) | **API, autenticación y caché de tasas**: cliente libcurl, JWT compartido con mutex, refresco ante 401, reintentos y timeouts, parser JSON, caché sincronizada, manejo seguro de credenciales y API simulada | `src/api.hpp`, `src/json_min.hpp`, `src/cache_tasas.hpp`, `tests/mock_api.py`, `tests/e2e_mock.py`, `.gitignore`, `.env.example` | [a3f6656](https://github.com/tommmm28/Computacion_paralela/commit/a3f665625) · [4a2407e](https://github.com/tommmm28/Computacion_paralela/commit/4a2407e6d) |
+| Tomas Martinez | [@tommmm28](https://github.com/tommmm28) | **Paralelización OpenMP, integración y rendimiento**: validación/duplicados en paralelo, reducción de claves, consulta paralela de tasas, agregación con mapas por hilo, programa principal, Makefile, benchmark y análisis de speedup | `src/procesamiento.hpp`, `main.cpp`, `Makefile`, `scripts/benchmark.sh`, `docs/analisis_rendimiento.md`, `README.md` | [1c73ee1](https://github.com/tommmm28/Computacion_paralela/commit/1c73ee17b85868c786d7abce82c99cbe9c1063f9) |
 
-Cada integrante subió su parte desde su propia cuenta (ver `git shortlog -sne`). Completar el
-hashes de commit antes de entregar.
+Los enlaces anteriores muestran commits representativos de cada integrante. Para revisar todo el
+historial de contribuciones, utiliza `git shortlog -sne main` y los Pull Requests fusionados (#1, #2 y #4).
 
 Recordatorio: agregar al docente [`https://github.com/sebasalazar`](https://github.com/sebasalazar)
 como miembro del repositorio.
